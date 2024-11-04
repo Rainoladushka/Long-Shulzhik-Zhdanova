@@ -31,7 +31,7 @@ class Quaternion:
             a1*d2 + b1*c2 - c1*b2 + d1*a2   # Imaginary part k
         )
 
-    # # Conjugation
+    # Conjugation
     def conjugate_Quaternion(self):         
         return Quaternion(self.a, -self.b, -self.c, -self.d)
 
@@ -50,7 +50,7 @@ class Quaternion:
                           conjugate.c / norm_sq, 
                           conjugate.d / norm_sq)
 
-    # Rotate vectors (x, y, z) via quaternions
+    # Rotate vectors (x, y, z) using quaternion rotation
     def rotate_vector(self, vector):
         vec_quat = Quaternion(0, *vector)  # Convert vector to quaternion
         rotated = self.multiply_Quaternion(vec_quat).multiply_Quaternion(self.inverse_Quaternion())  # rotation process
