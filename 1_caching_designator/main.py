@@ -11,7 +11,7 @@ def caching_designator(cache_depth: int = 128):
         @functools.wraps(func)
         def wrapper(*args: Tuple[Any], **kwargs: dict) -> Any:
             # Create a key based on function arguments to identify unique calls
-            key = (args, frozenset(kwargs.items()))
+            key = (args, tuple(sorted(kwargs.items())))
 
             # Check if the result is in the cache
             if key in cache:
@@ -27,8 +27,8 @@ def caching_designator(cache_depth: int = 128):
 
             # Maintain cache depth limit
             if len(cache) > cache_depth:
-                removed_key, _ = cache.popitem(last=False)  # Remove oldest item
-                print(f"Cache depth exceeded. Removing oldest cached result for arguments: {removed_key}")
+                removed_key, removed_value = cache.popitem(last=False)  # Remove oldest item
+                print(f"Cache depth exceeded. Removing oldest cached result for arguments: {removed_key}. Removed result: {removed_value}")
 
             return result
 
@@ -53,4 +53,4 @@ print(compute_square(4))  # Cache hit
 print(compute_sum(2, 3))  # Cache miss
 print(compute_sum(2, 3))  # Cache hit
 print(compute_sum(5, 7))  # Cache miss
-print(compute_sum(2, 3))  # Cache miss (previous entry removed due to depth limit)
+print(compute_sum(3, 3))  # Cache miss (previous entry removed due to depth limit)
