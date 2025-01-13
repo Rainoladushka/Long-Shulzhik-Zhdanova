@@ -1,0 +1,11 @@
+name,url,price_day_1,price_day_2,price_day_3,price_day_4,price_day_5
+Product 1,https://example.com/product/1,100000,105000,102000,104500,103000
+Product 2,https://example.com/product/2,150000,148000,152000,149500,151000
+Product 3,https://example.com/product/3,120000,118000,119500,121000,120500
+Product 4,https://example.com/product/4,200000,198000,202000,201500,200500
+Product 5,https://example.com/product/5,300000,305000,302000,301000,303500
+Product 6,https://example.com/product/6,250000,245000,248000,246500,249000
+Product 7,https://example.com/product/7,130000,133000,131500,132500,130500
+Product 8,https://example.com/product/8,220000,225000,218000,219500,221000
+Product 9,https://example.com/product/9,110000,113000,115000,112500,114000
+Product 10,https://example.com/product/10,180000,185000,182000,180500,181500
