@@ -15,16 +15,11 @@
 
 1. **Клонируйте репозиторий:**
     ```bash
-    git clone https://github.com/yourusername/telegram-price-tracker.git
-    cd telegram-price-tracker
+    git clone https://github.com/Rainoladushka/Long-Shulzhik-Zhdanova/blob/main/final/bot_telegram.py
+    cd Long-Shulzhik-Zhdanova/final
     ```
 
-2. **Установите зависимости:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Настройте подключение к MySQL:**
+2. **Настройте подключение к MySQL:**
     - Обновите `db_config` в коде:
       ```python
       db_config = {
@@ -37,7 +32,7 @@
       }
       ```
 
-4. **Запустите бота:**
+3. **Запустите бота:**
     ```bash
     python bot_telegram.py
     ```
